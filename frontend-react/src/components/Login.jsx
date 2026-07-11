@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
@@ -42,7 +42,7 @@ const Login = () => {
       console.log("Logged in successfully");
 
       setIsLoggedIn(true);
-      navigate('/');
+      navigate('/dashboard');
 
     } catch (error) {
       console.error(error.response?.data || error);
